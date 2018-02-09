@@ -11,13 +11,14 @@ url = ''.join([host,endpoint])
 params = {'show_env' :1}
 
 #对应postman body中的form-data形式
-# data = {'a':"aimee",'b':'学测试'}
-#
-# r = requests.post(url,params=params,data=data)
+data = {'a':"aimee",'b':'学测试'}
+
+r = requests.post(url,params=params,data=data)
 # print(r.text)
-#
-# res = r.json()
-# print(res['form'])
+
+res = r.json()
+# print(res)
+print(res['form']['a'])
 
 
 #json 对应postman中 body中 raw格式将json格式复制进去
@@ -36,7 +37,10 @@ params = {'show_env' :1}
 # r = requests.post(url,data=json.dumps(data)) #低版本
 # r = requests.post(url,json=data)  #request模块高版本支持json关键字参数
 # print(r.text)
-# response =r.json()
+# resp =r.json()
+# employees =resp.get('data')
+# print(employees)
+# print(type(employees))
 # print(response['json'])
 
 
@@ -57,11 +61,11 @@ params = {'show_env' :1}
 # ]
 
 #5、流式上传
-with open('test.txt') as f:
-    r = requests.post(url,data=f)
+# with open('test.txt') as f:
+#     r = requests.post(url,data=f)
 
 # r = requests.post(url,files=files)
-print(r.headers)
-print(r.text)
+# print(r.headers)
+# print(r.text)
 
 
