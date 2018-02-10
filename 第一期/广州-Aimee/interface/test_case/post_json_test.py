@@ -1,10 +1,12 @@
 #coding:utf-8
 __author__ = 'Aimee'
+
 import unittest
 import requests
 import json
-from interface.public import base
-from interface.public import HttpService
+from public import base
+from public import read_excel
+from public import HttpService
 
 class PostJsonTest(unittest.TestCase):
     def setUp(self):

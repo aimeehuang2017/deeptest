@@ -1,9 +1,11 @@
 #coding:utf-8
 __author__ = 'Aimee'
+
 import unittest
 import requests
 import json
 from interface.public import base
+from interface.public import read_excel
 from interface.public import HttpService
 
 class PostJsonTest(unittest.TestCase):
@@ -39,6 +41,7 @@ class PostJsonTest(unittest.TestCase):
         pass
 
     if __name__ =="__main__":
+
         unittest.main()
 
 
